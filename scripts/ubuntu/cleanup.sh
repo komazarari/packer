@@ -8,7 +8,7 @@
 dpkg --list | awk '{ print $2 }' | grep 'linux-image-3.*-generic' | grep -v `uname -r` | xargs apt-get -y purge
 
 # delete all linux headers
-dpkg --list | awk '{ print $2 }' | grep linux-headers | xargs apt-get -y purge
+# dpkg --list | awk '{ print $2 }' | grep linux-headers | xargs apt-get -y purge
 
 # delete linux source
 dpkg --list | awk '{ print $2 }' | grep linux-source | xargs apt-get -y purge
@@ -17,7 +17,7 @@ dpkg --list | awk '{ print $2 }' | grep linux-source | xargs apt-get -y purge
 dpkg --list | awk '{ print $2 }' | grep -- '-dev$' | xargs apt-get -y purge
 
 # delete compilers and other development tools
-apt-get -y purge cpp gcc g++
+# apt-get -y purge cpp gcc g++
 
 # delete X11 libraries
 apt-get -y purge libx11-data xauth libxmuu1 libxcb1 libx11-6 libxext6
