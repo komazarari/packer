@@ -60,7 +60,7 @@
   ],
   "post-processors": [
     {
-      "output": "./builds/{{.Provider}}/opscode_ubuntu-13.10_chef-{{user `chef_version`}}.box",
+      "output": "./builds/{{.Provider}}/ubuntu-13.10_chef-{{user `chef_version`}}.box",
       "type": "vagrant"
     }
   ],
